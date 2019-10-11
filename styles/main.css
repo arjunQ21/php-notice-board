@@ -1,0 +1,154 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: Tahoma ;
+	background: rgba(0,0,255, 0.06);
+}
+header{
+	background: rgba(0,0,255, 0.7);
+	box-shadow: 0px 1px 3px blue ;
+	margin-bottom: 15px;
+}
+.headText{
+	text-align: center ;
+	color: #eee;
+	padding: 0px;
+	margin: 0px;
+}
+.pageHead{
+	text-align: left ;
+	padding: 5px 0px 5px 20px;
+	letter-spacing: 2px;
+}
+nav{
+	display: block;
+	padding: 5px 10px;
+}
+nav a{
+	text-decoration: none ;
+	display: inline-block;
+	margin: 0px 3px;
+	padding: 5px 10px;
+	background: rgba(0,0,255,0.6);
+	font-weight: bold ;
+	color: rgba(0,0,255, 0.5);
+	color: white;
+	border: 2px solid blue;
+}
+nav a:hover{
+	background: rgba(0,0,255,1);
+}
+.msg{
+	padding: 10px 20px;
+	color: rgba(0,0,0,0.4);
+	background: rgba(0,255,0,0.1);
+	border: 1px solid lightgreen;
+	box-sizing: border-box;
+	width: 95%;
+	margin: auto;
+	font-weight: bold ;
+}
+.alert{
+	background: rgba(255, 0,0,0.1);
+	border: 1px solid orange;
+}
+.notices_cont{
+	/*background: rgba(0,0,0,0.1);*/
+	padding: 10px;
+	padding-top: 0px;
+	display: flex ;
+	align-items: top ;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+}
+.notice{
+	min-width: 200px ;
+	max-width: 300px ;
+	width: 300px ;
+	margin: 10px;
+	/*border: 1px solid #555;*/
+	padding: 10px 10px 0px 10px;
+	/*padding-bottom: 0px;*/
+	box-sizing: border-box;
+	box-shadow: 1px 1px 5px 1px #999 ;
+	border-radius: 3px;
+	display: inline-block;
+	background: white;
+}
+.n_by{
+	font-size: 95%;
+	text-align: left;
+	padding: 0px 0px 5px 0;
+	/*position: relative;*/
+	display: grid ;
+	grid-template-columns: auto 25px ;
+}
+.edit{
+	text-align: center;
+	box-sizing: border-box;
+}
+.edit:hover{
+	background: rgba(0,0,0,0.1);
+}
+.n_time{
+	font-size: 75%;
+	text-align: right;
+	padding: 5px 0 0 0;	
+}
+.n_title{
+	font-size: 110%;
+	font-weight: bold ;
+	letter-spacing: 1px ;
+	text-transform: capitalize;
+	margin: 0px 0px 5px 0px;
+}
+.n_body{
+	color: #444;
+	/*background: rgba(0,0,0,0.03);*/
+	padding: 0px 10px;
+	overflow-y: hidden;
+	max-height: 200px;
+	line-height: 25px;
+	letter-spacing: 1px;
+	font-family: sans-serif;
+}
+form{
+	width: 80%;
+	margin: auto;
+	/*margin-top: 10px;*/
+}
+.form-group{
+	/*border: 1px solid green;*/
+	display: flex ;
+	margin: 10px 0;
+	align-items: top;
+	/*justify-content: space-between;*/
+}
+.form-title{
+	font-size: 110%;
+	font-weight: bold ;
+	color: #444;
+}
+.form-control{
+	margin-left: 10px;
+	flex: 1;
+}
+.form-control input[type='text'], .form-control textarea{
+	width: 100%;
+	padding: 5px 10px;
+	font-size: 105%;
+}
+input[type='submit']{
+	font-weight: bold;
+	background: rgba(0,0,255,0.2);
+	padding: 5px 10px;
+	letter-spacing: 2px;
+	border: 1px solid blue;
+}
+footer{
+	border-top: 1px solid #888;
+	background: rgba(0,0,0,0.1);
+	padding: 10px 5px;
+	color: #333;
+}
