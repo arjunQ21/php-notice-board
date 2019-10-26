@@ -130,14 +130,15 @@ form{
 	font-weight: bold ;
 	color: #444;
 }
-.form-control{
+.form-ctrl{
 	margin-left: 10px;
 	flex: 1;
 }
-.form-control input[type='text'], .form-control textarea{
+.form-ctrl input[type='text'], .form-ctrl textarea{
 	width: 100%;
 	padding: 5px 10px;
 	font-size: 105%;
+	display: block ;
 }
 input[type='submit']{
 	font-weight: bold;

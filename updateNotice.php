@@ -29,23 +29,16 @@ if(sizeof($previousData) == 0){ ?>
 	</div>
 <?php } else { ?>
 
+<?php if(authorised()) { ?>
 <div class="noticeCont">
 	<form action="backend/updateNotice.php" method='POST'>
-<!-- 		<div class="form-group">
-			<div class="form-title">
-				Name:
-			</div>
-			<div class="form-control">
-				<input type="text" name='name' value = "<?= $previousData[0]['made_by'] ?> " required>
-			</div>
-		</div> -->		
 		<h2 class='pageHead'>Update Notice by <?= $previousData[0]['made_by'] ?></h2>
 		<input type="hidden" name="id" value='<?= $id ?>'>
 		<div class="form-group">
 			<div class="form-title">
 				Title:
 			</div>
-			<div class="form-control">
+			<div class="form-ctrl">
 				<input type="text" name='title' value = "<?= $previousData[0]['title'] ?> " required>
 			</div>
 		</div>
@@ -53,19 +46,25 @@ if(sizeof($previousData) == 0){ ?>
 			<div class="form-title">
 				Description:
 			</div>
-			<div class="form-control">
+			<div class="form-ctrl">
 				<textarea name='description'  cols='30' rows='5' required>
 					<?= trim($previousData[0]['body']) ?>
 				</textarea>
 			</div>
 		</div>	
 		<div class="form-group">
-			<div class="form-control">
+			<div class="form-ctrl">
 				<input type="submit" name='submit' value='Update'>
 			</div>
 		</div>			
 	</form>
 </div>
+	
+<?php } else { ?>
+	<div class="msg alert">
+		You cannot update notices. Go to authorisation URL to get admin permissions.
+	</div>
+<?php } ?>
 
 <?php } ?>
 

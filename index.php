@@ -16,6 +16,16 @@ $notices = mysqli_fetch_all($results, MYSQLI_ASSOC) ;
 
 
 ?>
+<?php 
+if(!authorised()){
+	?>
+		<div class="alert">
+			You cannot update notices. Go to authorisation URL to get admin permissions.
+		</div>
+	<?php 
+}
+?>
+
 
 <?php if(sizeof($notices) >= 1){ ?>
 	<div class="notices_cont">
@@ -26,9 +36,15 @@ $notices = mysqli_fetch_all($results, MYSQLI_ASSOC) ;
 						<div class='n_by_text'>
 							<?= "From: ".$notice['made_by'] ?>
 						</div>
-						<div class="edit" >
-							<a href='updateNotice.php?id=<?= $notice['id'] ?>' >&#9998;</a>
-						</div>
+							<?php 
+								if(authorised()){
+									?>
+										<div class="edit" >
+											<a href='updateNotice.php?id=<?= $notice['id'] ?>' >&#9998;</a>
+										</div>
+									<?php
+								}
+							?>
 					</div>
 					<div class="n_title">
 						<?= $notice['title'] ?>
